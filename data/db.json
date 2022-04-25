@@ -1,0 +1,19 @@
+{
+    "solutions": [
+        { "player": "pogba", "id": 1 },
+        { "player": "messi", "id": 2 },
+        { "player": "henry", "id": 3 },
+        { "player": "kante", "id": 4 },
+        { "player": "neuer", "id": 5 },
+        { "player": "adams", "id": 6 },
+        { "player": "pogba", "id": 7 },
+        { "player": "giggs", "id": 8 },
+        { "player": "xhaka", "id": 9 },
+        { "player": "pirlo", "id": 10 },
+        { "player": "vardy", "id": 11 },
+        { "player": "jones", "id": 12 },
+        { "player": "payet", "id": 13 },
+        { "player": "silva", "id": 14 },
+        { "player": "iwobi", "id": 15 }
+    ]
+}
