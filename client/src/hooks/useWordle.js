@@ -9,7 +9,26 @@ const useWordle = (solution) => {
     const [isCorrect, setIsCorrect] = useState(false);
 
     const formatGuess = () => {
-        console.log(`Formatting the guess - ${currentGuess}`)
+        let solutionArray = [...solution];
+        let formattedGuess = [...currentGuess].map((letter) => {
+            return {key: letter, color: 'grey'}
+        });
+        // find any correct green letters
+        formattedGuess.forEach((letter, i) => {
+            if (solutionArray[i] === letter.key) {
+                formattedGuess[i].color = 'green'
+                solutionArray[i] = null
+            };
+        });
+
+        // find any yellow letters
+        formattedGuess.forEach((letter, i) => {
+            if (solutionArray.includes(letter.key) && letter.color !== 'green') {
+                formattedGuess[i].color = 'yellow';
+                solutionArray[solutionArray.indexOf(letter.key)] = null;
+            };
+        });
+        return formattedGuess;
     }
     // add a new guess to the guesses state
     // update the isCorrect state if guess is correct
@@ -38,7 +57,8 @@ const useWordle = (solution) => {
                 return
             };
 
-            formatGuess()
+            const formatted = formatGuess();
+            console.log(formatted);
         }
         if (key === 'Backspace') {
             setCurrentGuess((prevState) => {
