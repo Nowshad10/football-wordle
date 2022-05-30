@@ -6,11 +6,10 @@ function App() {
   const [solution, setSolution] = useState(null)
 
   useEffect(() => {
-    fetch('http://localhost:8000/solutions')
+    fetch('http://localhost:5000/random')
       .then(response => response.json())
       .then(data => {
-        const randomSolution = data[Math.floor(Math.random()*data.length)];
-        setSolution(randomSolution.player);
+        setSolution(data[0].name);
       })
   }, [setSolution])
 
