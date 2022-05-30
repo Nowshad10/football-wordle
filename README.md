@@ -6,6 +6,9 @@ Based on the original wordle game, this clone is solely to do with footballers. 
 - The client side is deployed at: https://football-wordle.netlify.app/
 - The server is deployed at: https://football-wordle-server.herokuapp.com/players
 
+### To Do:
+- Make keypad functional.
+
 ## Installation & Usage
 - Fork/clone the repo.
 - For the **server** side:
