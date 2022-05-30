@@ -6,7 +6,7 @@ function App() {
   const [solution, setSolution] = useState(null)
 
   useEffect(() => {
-    fetch('http://localhost:5000/random')
+    fetch('https://football-wordle-server.herokuapp.com/random')
       .then(response => response.json())
       .then(data => {
         setSolution(data[0].name);
